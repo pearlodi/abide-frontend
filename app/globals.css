@@ -50,7 +50,9 @@
   --peach: #f1ae9f;
   --coral: #ca687f;
   --lavender: #c9b9e5;
-  --yellow: #f1ce83;
+  /* --yellow: #f1ce83; */
+  --yellow: #F3C6B8;
+  
   --line: rgba(89, 61, 88, 0.12);
   --shadow: 0 18px 38px rgba(94, 61, 83, 0.15),
     0 3px 0 rgba(255, 255, 255, 0.8) inset;
@@ -76,7 +78,7 @@
   --peach: #f4ad92;
   --coral: #ec755b;
   --lavender: #c6c0ec;
-  --yellow: #f5d77f;
+  --yellow: #F6D379;
   --line: rgba(24, 59, 75, 0.12);
   --shadow: 0 18px 40px rgba(45, 75, 88, 0.15),
     0 3px 0 rgba(255, 255, 255, 0.8) inset;
@@ -102,7 +104,7 @@
   --peach: #dedede;
   --coral: #202020;
   --lavender: #cfcfcf;
-  --yellow: #f0f0f0;
+  --yellow: #F6D379;
   --line: rgba(0, 0, 0, 0.13);
   --shadow: 0 18px 38px rgba(0, 0, 0, 0.13),
     0 3px 0 rgba(255, 255, 255, 0.8) inset;
@@ -117,7 +119,7 @@
 
 :root[data-theme="hotpink"] {
   --navy: #531138;
-  --navy-deep: #2f0820;
+  --navy-deep: #343F63;
   --ink-soft: #815269;
   --white: #fff8fc;
   --cream: #fff0f8;
@@ -128,7 +130,7 @@
   --peach: #ffacd7;
   --coral: #ff1493;
   --lavender: #e9bce8;
-  --yellow: #ffd876;
+  --yellow: #F6D379;
   --line: rgba(83, 17, 56, 0.13);
   --shadow: 0 18px 38px rgba(128, 27, 82, 0.16),
     0 3px 0 rgba(255, 255, 255, 0.82) inset;
@@ -154,7 +156,7 @@
   --peach: #e3b5d6;
   --coral: #8b3fd1;
   --lavender: #cdb9f2;
-  --yellow: #f1d178;
+  --yellow: #F6D379;
   --line: rgba(53, 32, 94, 0.13);
   --shadow: 0 18px 38px rgba(70, 42, 116, 0.16),
     0 3px 0 rgba(255, 255, 255, 0.82) inset;

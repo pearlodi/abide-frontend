@@ -1,19 +1,24 @@
 
 "use client"
 
-const Welcome = () => {
+import { useTheme } from "@/app/theme-provider";
+import Hero from "./Hero";
+import DevotionalAndReading from "./Devotional";
+import HomePortal from "./Portal";
+import VerseAndMemory from "./VerseAndMemory";
+import AchievementStrip from "./Achievement";
 
+const Welcome = () => {
+  const { theme } = useTheme();
+  const girlTheme = theme === "girl";
   return (
     <>
-      <div className="bg-bg-light text-text-dark">
-        <h1 className="text-text-dark">Welcome to Abide</h1>
-
-        <p className="text-text-dark text-lg font-bold">Your faith, your pace.</p>
-
-        <button className="bg-primary text-text-light rounded-2xl px-6 py-3">
-          Continue
-        </button>
-      </div>
+     <Hero/>
+     <DevotionalAndReading theme={theme} />
+     <HomePortal theme={theme} />
+     <VerseAndMemory theme={theme} />
+     <AchievementStrip theme={theme} />
+     
     </>
   );
 };

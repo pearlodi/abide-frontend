@@ -44,29 +44,25 @@ const Navbar = () => {
   const selectedTheme = themes.find((item) => item.id === theme) ?? themes[1];
 
   return (
-    <div className="relative w-64">
+    <div className="w-full p-4 bg-navy">
+    <div className="relative w-fit ">
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
-        className="flex w-full items-center gap-3 rounded-2xl border border-border bg-surface p-3 text-left shadow-theme transition hover:-translate-y-0.5"
+        className="flex w-full items-center  rounded-2xl border border-border bg-surface p-3 text-left shadow-theme transition hover:-translate-y-0.5"
       >
         <div
-          className={`h-11 w-11 shrink-0 rounded-xl bg-gradient-to-br ${selectedTheme.gradient}`}
+          className={`h-fit fit shrink-0 rounded-xl bg-gradient-to-br ${selectedTheme.gradient}`}
         />
 
-        <div className="min-w-0 flex-1">
-          <p className="text-xs text-text-muted">Current theme</p>
+        <div className=" w-fit">
           <p className="font-semibold text-text-dark">
             {selectedTheme.name}
           </p>
         </div>
 
-        <span
-          className={`text-text-muted transition-transform ${open ? "rotate-180" : ""}`}
-        >
-          ▼
-        </span>
+      
       </button>
 
       {open && (
@@ -109,6 +105,7 @@ const Navbar = () => {
           })}
         </div>
       )}
+    </div>
     </div>
   );
 };
