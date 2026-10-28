@@ -1,26 +1,174 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-text-light: var(--white);
+  --color-text-dark: var(--navy);
+  --color-text-muted: var(--ink-soft);
+
+  --color-bg-light: var(--cream);
+  --color-bg-dark: var(--navy-deep);
+  --color-shell: var(--shell);
+
+  --color-primary: var(--blue);
+  --color-primary-deep: var(--blue-deep);
+  --color-secondary: var(--mint);
+  --color-accent: var(--coral);
+  --color-peach: var(--peach);
+  --color-lavender: var(--lavender);
+  --color-yellow: var(--yellow);
+
+  --color-surface: var(--white);
+  --color-border: var(--line);
+
+  --shadow-theme: var(--shadow);
+  --shadow-raised: var(--raised);
+
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-ink-soft: var(--ink-soft);
+  --color-white: var(--white);
+  --color-cream: var(--cream);
+  --color-mint: var(--mint);
+  --color-blue: var(--blue);
+  --color-blue-deep: var(--blue-deep);
+  --color-coral: var(--coral);
+
+  --font-sans: var(--font-dm-sans);
+  --font-heading: var(--font-fredoka);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root[data-theme="girl"] {
+  --navy: #593d58;
+  --navy-deep: #3f293f;
+  --ink-soft: #7f6878;
+  --white: #fffaf4;
+  --cream: #fff3e7;
+  --shell: #f7ebe5;
+  --mint: #bfd8c7;
+  --blue: #cbbde4;
+  --blue-deep: #917ab7;
+  --peach: #f1ae9f;
+  --coral: #ca687f;
+  --lavender: #c9b9e5;
+  --yellow: #f1ce83;
+  --line: rgba(89, 61, 88, 0.12);
+  --shadow: 0 18px 38px rgba(94, 61, 83, 0.15),
+    0 3px 0 rgba(255, 255, 255, 0.8) inset;
+  --raised: 0 8px 0 rgba(89, 61, 88, 0.12), 0 14px 28px rgba(94, 61, 83, 0.15),
+    inset 0 2px 0 rgba(255, 255, 255, 0.6);
+  --home-feature-bg: #f1b8b5;
+  --home-feature-scene: #cbb9df;
+  --home-feature-complete: #c8ddcd;
+  --home-feature-pill: rgba(255, 250, 244, 0.52);
+  background: #f7ebe5;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root[data-theme="boy"] {
+  --navy: #183b4b;
+  --navy-deep: #102d3b;
+  --ink-soft: #627985;
+  --white: #fffdf9;
+  --cream: #fff7e8;
+  --shell: #d9edf0;
+  --mint: #b9dfd4;
+  --blue: #a9d8e6;
+  --blue-deep: #4c93a8;
+  --peach: #f4ad92;
+  --coral: #ec755b;
+  --lavender: #c6c0ec;
+  --yellow: #f5d77f;
+  --line: rgba(24, 59, 75, 0.12);
+  --shadow: 0 18px 40px rgba(45, 75, 88, 0.15),
+    0 3px 0 rgba(255, 255, 255, 0.8) inset;
+  --raised: 0 8px 0 rgba(24, 59, 75, 0.12), 0 14px 28px rgba(48, 81, 94, 0.14),
+    inset 0 2px 0 rgba(255, 255, 255, 0.55);
+  --home-feature-bg: #9cced3;
+  --home-feature-scene: #78b6bd;
+  --home-feature-complete: #b9dfd4;
+  --home-feature-pill: rgba(255, 255, 255, 0.4);
+  background: #d9edf0;
+}
+
+:root[data-theme="monochrome"] {
+  --navy: #151515;
+  --navy-deep: #000;
+  --ink-soft: #666;
+  --white: #fff;
+  --cream: #f3f3f3;
+  --shell: #e9e9e9;
+  --mint: #d9e2dc;
+  --blue: #d8d8d8;
+  --blue-deep: #555;
+  --peach: #dedede;
+  --coral: #202020;
+  --lavender: #cfcfcf;
+  --yellow: #f0f0f0;
+  --line: rgba(0, 0, 0, 0.13);
+  --shadow: 0 18px 38px rgba(0, 0, 0, 0.13),
+    0 3px 0 rgba(255, 255, 255, 0.8) inset;
+  --raised: 0 8px 0 rgba(0, 0, 0, 0.12), 0 14px 28px rgba(0, 0, 0, 0.12),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+  --home-feature-bg: #d8d8d8;
+  --home-feature-scene: #bcbcbc;
+  --home-feature-complete: #d9e2dc;
+  --home-feature-pill: rgba(255, 255, 255, 0.52);
+  background: #e9e9e9;
+}
+
+:root[data-theme="hotpink"] {
+  --navy: #531138;
+  --navy-deep: #2f0820;
+  --ink-soft: #815269;
+  --white: #fff8fc;
+  --cream: #fff0f8;
+  --shell: #ffe6f4;
+  --mint: #cce6da;
+  --blue: #f1b5db;
+  --blue-deep: #c62b83;
+  --peach: #ffacd7;
+  --coral: #ff1493;
+  --lavender: #e9bce8;
+  --yellow: #ffd876;
+  --line: rgba(83, 17, 56, 0.13);
+  --shadow: 0 18px 38px rgba(128, 27, 82, 0.16),
+    0 3px 0 rgba(255, 255, 255, 0.82) inset;
+  --raised: 0 8px 0 rgba(83, 17, 56, 0.12), 0 14px 28px rgba(128, 27, 82, 0.15),
+    inset 0 2px 0 rgba(255, 255, 255, 0.62);
+  --home-feature-bg: #ffacd7;
+  --home-feature-scene: #e9bce8;
+  --home-feature-complete: #cce6da;
+  --home-feature-pill: rgba(255, 248, 252, 0.5);
+  background: #ffe6f4;
+}
+
+:root[data-theme="purple"] {
+  --navy: #35205e;
+  --navy-deep: #21113f;
+  --ink-soft: #715f8e;
+  --white: #fffbff;
+  --cream: #f7f0ff;
+  --shell: #eee7fb;
+  --mint: #c9dfd3;
+  --blue: #c7b6ee;
+  --blue-deep: #6d28d9;
+  --peach: #e3b5d6;
+  --coral: #8b3fd1;
+  --lavender: #cdb9f2;
+  --yellow: #f1d178;
+  --line: rgba(53, 32, 94, 0.13);
+  --shadow: 0 18px 38px rgba(70, 42, 116, 0.16),
+    0 3px 0 rgba(255, 255, 255, 0.82) inset;
+  --raised: 0 8px 0 rgba(53, 32, 94, 0.12), 0 14px 28px rgba(70, 42, 116, 0.15),
+    inset 0 2px 0 rgba(255, 255, 255, 0.62);
+  --home-feature-bg: #c7b6ee;
+  --home-feature-scene: #a98ee1;
+  --home-feature-complete: #c9dfd3;
+  --home-feature-pill: rgba(255, 251, 255, 0.5);
+  background: #eee7fb;
+}
+
+@utility shadow-auth-raised {
+  box-shadow:
+    0 5px 0 #171614,
+    0 7px 12px rgba(28, 27, 26, 0.16);
 }
