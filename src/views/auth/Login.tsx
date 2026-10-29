@@ -5,23 +5,7 @@
 
 import { Sparkles, Heart, Flame, ArrowRight } from "lucide-react";
 
-// export default function Example() {
-//   return (
-//     <ThemeCard color="lavender" shadow="theme" padding="lg">
-//       <ThemeHeading level={2} color="navy-deep">
-//         Your daily devotion
-//       </ThemeHeading>
 
-//       <ThemeButton shadow="theme" color="navy" textColor="white">
-//         Start  todays devotional
-//       </ThemeButton>
-//       <ThemeText color="navy">
-//         Take a moment to spend time with God.
-//       </ThemeText>
-
-//     </ThemeCard>
-//   );
-// }
 
 import Container from "@/src/components/shared/Container";
 import Link from "next/link";

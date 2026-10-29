@@ -8,7 +8,7 @@ import HomePortal from "./Portal";
 import VerseAndMemory from "./VerseAndMemory";
 import AchievementStrip from "./Achievement";
 
-const Welcome = () => {
+const WelcomePage = () => {
   const { theme } = useTheme();
   const girlTheme = theme === "girl";
   return (
@@ -23,4 +23,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default WelcomePage;

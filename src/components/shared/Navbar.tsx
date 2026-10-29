@@ -50,15 +50,15 @@ const Navbar = () => {
         type="button"
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
-        className="flex w-full items-center  rounded-2xl border border-border bg-surface p-3 text-left shadow-theme transition hover:-translate-y-0.5"
+        className="flex w-full items-center text-white  rounded-2xl  p-3 text-left transition hover:-translate-y-0.5"
       >
         <div
-          className={`h-fit fit shrink-0 rounded-xl bg-gradient-to-br ${selectedTheme.gradient}`}
+          className={`h-fit fit font-heading shrink-0 rounded-xl bg-gradient-to-br ${selectedTheme.gradient}`}
         />
 
         <div className=" w-fit">
-          <p className="font-semibold text-text-dark">
-            {selectedTheme.name}
+          <p className=" font-heading text-white text-2xl font-bold">
+            {/* {selectedTheme.name} */}abide
           </p>
         </div>
 

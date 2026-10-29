@@ -1,4 +1,3 @@
-
 import type { HTMLAttributes, ReactNode } from "react";
 import {
   backgroundColors,
@@ -14,6 +13,7 @@ type ThemeCardProps = HTMLAttributes<HTMLDivElement> & {
   textColor?: ThemeColor;
   shadow?: Shadow;
   padding?: "none" | "sm" | "md" | "lg";
+  border?: boolean | string;
 };
 
 const paddings = {
@@ -30,6 +30,7 @@ export default function ThemeCard({
   shadow = "none",
   padding = "md",
   className = "",
+  border = false,
   style,
   ...props
 }: ThemeCardProps) {
@@ -38,13 +39,20 @@ export default function ThemeCard({
       ? `0 7px 0 color-mix(in srgb, var(--${color}) 65%, black), 0 10px 16px color-mix(in srgb, var(--${color}) 25%, transparent)`
       : undefined;
 
+  const borderClass =
+    border === true
+      ? "border-[3px] border-white/65"
+      : typeof border === "string"
+        ? border
+        : "";
+
   return (
     <div
       style={{
         ...style,
         ...(cardShadow ? { boxShadow: cardShadow } : {}),
       }}
-      className={`rounded-3xl ${backgroundColors[color]} ${textColors[textColor]} ${shadow === "normal" ? shadows.normal : ""} ${paddings[padding]} ${className}`}
+      className={`rounded-3xl ${backgroundColors[color]} ${textColors[textColor]} ${shadow === "normal" ? shadows.normal : ""} ${paddings[padding]} ${borderClass} ${className}`}
       {...props}
     >
       {children}
